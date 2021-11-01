@@ -1,6 +1,9 @@
 html,
 body {
   padding: 0;
+  font-size: 62.5%;
+  overflow-x:hidden !important;
+  height:100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -13,4 +16,137 @@ a {
 
 * {
   box-sizing: border-box;
+
+}
+.main-div{
+
+  max-height:auto;
+  width:100vw;
+  overflow-x:hidden !important;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow:column wrap;
+  overflow-y: auto;
+}
+.third-div{
+
+  min-height:auto;
+
+}
+.second-div{
+  max-height:20vh;
+  margin:1rem;
+}
+.parent-div{
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow:column wrap;
+
+}
+
+.parent-div-first,.download-box{
+  width:50vw;
+  background-color:rgba(6, 73, 121,0.5) ;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,0.5);
+  border-radius:2rem;
+  height:auto;
+  font-size:1rem;
+}
+.download-box{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:1rem;
+  flex-flow:column wrap;
+
+}
+.dropZone-box{
+  height:20rem;
+  max-width:40vw;
+  margin: 1rem 0 2rem 0;
+  border-radius: 2rem;
+  cursor:pointer;
+
+
+}
+
+.dropZone-box:focus{
+  outline:none;
+}
+h1{
+
+  font-size:3rem !important;
+  letter-spacing:0.4rem;
+  color:#fff;
+  text-shadow:3px 3px 3px rgba(0,0,0,0.4),-1px -1px 5px rgba(0,0,0,0.4);
+  overflow: hidden;
+
+}
+/* .dropZone-box:after{
+  content:"Drag & Drop Files Here";
+  font-size:1.8rem;
+  margin-top:4rem;
+} */
+.dropZone-box p{
+
+  width:100%;
+}
+.imageFile{
+  margin-left: 2rem;
+  background: rgba(6, 73, 121,0.5) ;
+  width:2rem;
+}
+.dropBox{
+  width:70%;
+  height:90%;
+  border:1px dashed yellow;
+  margin:1rem;
+  border-radius:1rem;
+  transition: 0.8s all linear;
+}
+.dropBox.danger{
+  border:1px dashed red;
+}
+.dropBox.success{
+  border:1px dashed green;
+}
+.form-div{
+  width:100%;
+  display:flex;
+  justify-content:flex-start !important ;
+  align-items: center;
+  flex-flow: column wrap;
+
+}
+/* .form-control{
+  width:70%;
+  text-align:center;
+  margin:auto;
+} */
+@media screen and (max-width:565px){
+  .parent-div-first{
+    width:80vw;
+
+  }
+  .dropZone-box{
+
+    max-width:60vw;
+
+  }
+}
+@media screen and (max-width:420px){
+  .parent-div-first{
+    width:90vw;
+
+  }
+  .dropZone-box{
+
+    max-width:80vw;
+
+  }
 }
